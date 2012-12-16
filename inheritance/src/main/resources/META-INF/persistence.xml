@@ -1,0 +1,32 @@
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+                                 http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+
+             version="2.0">
+    <persistence-unit name="inheritance" transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.ejb.HibernatePersistence</provider>
+        <class>uk.co.squarecloud.jpaexamples.inheritance.mapped_superclass.MSMessage</class>
+        <class>uk.co.squarecloud.jpaexamples.inheritance.mapped_superclass.MSPriorityMessage</class>
+        <class>uk.co.squarecloud.jpaexamples.inheritance.mapped_superclass.MSDescriptiveMessage</class>
+        <class>uk.co.squarecloud.jpaexamples.inheritance.singletable.STMessage</class>
+        <class>uk.co.squarecloud.jpaexamples.inheritance.singletable.STDescriptiveMessage</class>
+        <class>uk.co.squarecloud.jpaexamples.inheritance.singletable.STPriorityMessage</class>
+        <class>uk.co.squarecloud.jpaexamples.inheritance.joined_classes.JCMessage</class>
+        <class>uk.co.squarecloud.jpaexamples.inheritance.joined_classes.JCDescriptiveMessage</class>
+        <class>uk.co.squarecloud.jpaexamples.inheritance.joined_classes.JCPriorityMessage</class>
+        <class>uk.co.squarecloud.jpaexamples.inheritance.table_per_class.TBCMessage</class>
+        <class>uk.co.squarecloud.jpaexamples.inheritance.table_per_class.TBCDescriptiveMessage</class>
+        <class>uk.co.squarecloud.jpaexamples.inheritance.table_per_class.TBCPriorityMessage</class>
+        <exclude-unlisted-classes>true</exclude-unlisted-classes>
+        <validation-mode>AUTO</validation-mode>
+        <properties>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
+            <property name="hibernate.connection.driver_class" value="org.postgresql.Driver"/>
+            <property name="hibernate.hbm2ddl.auto" value="create-drop"/>
+            <property name="hibernate.connection.username" value="jpainheritence"/>
+            <property name="hibernate.connection.password" value="pigdogcow"/>
+            <property name="hibernate.connection.url" value="jdbc:postgresql://localhost"/>
+        </properties>
+    </persistence-unit>
+</persistence>
