@@ -59,12 +59,6 @@ public class Main {
     }
 
     @SuppressWarnings("unchecked")
-    private static List<MSMessage> getMessages() {
-        Query query = em.createQuery("select m from Message m");
-        return query.getResultList();
-    }
-
-    @SuppressWarnings("unchecked")
     private static List<STMessage> getSTMessages() {
         Query query = em.createQuery("select m from STMessage m");
         return query.getResultList();

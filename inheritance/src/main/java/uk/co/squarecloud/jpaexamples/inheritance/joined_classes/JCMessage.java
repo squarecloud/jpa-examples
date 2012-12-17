@@ -4,7 +4,6 @@ import javax.persistence.*;
 
 @Entity
 @Inheritance(strategy= InheritanceType.JOINED)
-@DiscriminatorColumn(name="JCMessageType", discriminatorType = DiscriminatorType.INTEGER)
 public abstract class JCMessage {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)

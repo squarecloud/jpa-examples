@@ -4,7 +4,6 @@ import javax.persistence.*;
 
 @Entity
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
-@DiscriminatorColumn(name="TBCMessageType", discriminatorType = DiscriminatorType.INTEGER)
 public abstract class TBCMessage {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
